@@ -27,7 +27,6 @@ export default new Vuex.Store({
   },
   actions: {
     async [types.ACTION_AUTHENTICATE]({ commit }, payload) {
-      console.log(payload);
       const res = await backend.login(payload.emailAddress, payload.password);
       const userToken = res.data.token;
       commit(types.MUTATION_SET_USER_TOKEN, userToken);
@@ -37,6 +36,11 @@ export default new Vuex.Store({
       const resUser = await backend.getMe();
       const user = resUser.data.data;
       commit(types.MUTATION_SET_USER, user);
+    },
+    [types.ACTION_LOGOUT]({ commit }) {
+      commit(types.MUTATION_SET_USER_TOKEN, undefined);
+      commit(types.MUTATION_SET_USER, undefined);
+      localStorage.removeItem("jwt");
     }
   },
   modules: {}

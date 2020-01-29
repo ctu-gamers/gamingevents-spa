@@ -6,6 +6,7 @@
   display: inline-block;
   outline: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn--nav {
@@ -41,4 +42,8 @@
 
 .btn--green {
   color: var(--color-primary);
+}
+
+.btn--orange {
+  color: var(--color-secondary-light);
 }
