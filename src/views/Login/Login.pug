@@ -1,0 +1,11 @@
+.login-form
+  h2.heading-secondary.margin-bottom-lg Log into your account
+  div.form
+    .form__group
+      label.form__label(for='email') Email address
+      input#email.form__input(type='email', placeholder='you@example.com', required v-model='emailAddress')
+    .form__group.ma-bt-md
+      label.form__label(for='password') Password
+      input#password.form__input(type='password', placeholder='••••••••', required, minlength='8' v-model='password')
+    .form__group
+      button.btn.btn--form.btn--green(@click="onLoginClicked") Login
