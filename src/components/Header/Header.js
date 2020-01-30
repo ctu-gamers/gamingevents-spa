@@ -13,6 +13,7 @@ export default {
     onLogoutClicked: function() {
       this.$store.dispatch(types.ACTION_LOGOUT);
       console.log("User successfully logged out.");
+      this.$router.push("/");
     }
   }
 };
