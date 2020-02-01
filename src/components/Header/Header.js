@@ -8,6 +8,11 @@ export default {
       get: function() {
         return this.$store.state.userToken !== undefined;
       }
+    },
+    username: {
+      get: function() {
+        return this.$store.state.user.username;
+      }
     }
   },
   methods: {

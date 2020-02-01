@@ -58,7 +58,9 @@ export default new Vuex.Store({
       localStorage.removeItem("jwt");
     },
     async [types.ACTION_UPDATEME]({ commit }, payload) {
-      commit(types.MUTATION_SET_USER, payload);
+      const resUser = await backend.updateMe(payload.username);
+      const user = resUser.data.data;
+      commit(types.MUTATION_SET_USER, user);
     }
   },
   modules: {},

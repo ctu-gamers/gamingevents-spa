@@ -1,23 +1,24 @@
-// import backend from "./../../api/backend";
-// import types from "./../../store/types";
+import types from "./../../store/types";
 
 export default {
   name: "user-profile",
   data: function() {
     return {
-      username: "",
-      photo: ""
+      username: ""
     };
   },
   mounted: function() {
     console.log(this.$store.state.user);
     this.username = this.$store.state.user.username;
-    this.photo = this.$store.state.user.photo;
   },
   methods: {
-    updateMe: function() {
+    updateMe: async function(e) {
+      e.preventDefault();
       try {
-        this.$store.dispatch();
+        await this.$store.dispatch(types.ACTION_UPDATEME, {
+          username: this.username
+        });
+        alert("Update Successfully");
       } catch (error) {
         alert(error);
       }

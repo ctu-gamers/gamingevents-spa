@@ -37,5 +37,11 @@ export default {
     return res;
   },
 
-  updateMe: async function() {}
+  updateMe: async function(username) {
+    const res = await getClient(true).patch("api/v1/users/updateMe", {
+      username: username
+    });
+    return res;
+  },
+  updatePassword: async function() {}
 };
