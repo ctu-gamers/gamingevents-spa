@@ -3,13 +3,19 @@
   height: 8rem;
   background-color: var(--color-grey-dark-3);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
 }
 
-.header__logo img {
-  height: 3.5rem;
+.nav-home {
+  width: 50%;
+}
+
+.header__logo {
+  margin-right: auto;
+  & img {
+    height: 3.5rem;
+  }
 }
 
 .nav-user {

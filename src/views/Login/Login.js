@@ -1,7 +1,7 @@
 // @ is an alias to /src
 
-// import backend from "./../../api/backend";
 import types from "./../../store/types";
+import routeNames from "./../../router/routeNames";
 
 export default {
   name: "login",
@@ -19,9 +19,8 @@ export default {
           emailAddress: this.emailAddress,
           password: this.password
         });
-        await this.$store.dispatch(types.ACTION_FETCH_USER);
         console.log(`User successfully logged in.`);
-        this.$router.push("/");
+        this.$router.push({ name: routeNames.ROUTE_HOME });
       } catch (error) {
         alert(error);
       }

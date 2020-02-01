@@ -1,3 +1,11 @@
+.form-container {
+  margin: 0 auto;
+  background-color: var(--color-white);
+  // box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+  padding: 5rem 7rem;
+  border-radius: 5px;
+}
+
 .form {
   &__group:not(:last-child) {
     display: flex;
@@ -21,6 +29,7 @@
     padding: 0.75rem 0.2rem;
     border-radius: 0.2rem;
     background-color: rgba(var(--color-white), 0.5);
+    //background-color: var(--color-grey-dark-2);
     border: none;
     border-bottom: 0.2rem solid var(--color-grey-dark-2);
     display: block;

@@ -35,5 +35,7 @@ export default {
   getMe: async function() {
     const res = await getClient(true).get("api/v1/users/me");
     return res;
-  }
+  },
+
+  updateMe: async function() {}
 };

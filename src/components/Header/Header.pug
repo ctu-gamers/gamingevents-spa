@@ -1,14 +1,14 @@
 header.header
   .nav.nav-home
-    router-link.btn.btn--nav.btn--green(to=`/`) Events
+    router-link.btn--link.btn--nav.btn--green(to=`/`) Events
   .header__logo
     img(src='./../../assets/img/logo.png' alt='Logo')
   nav.nav.nav-user
     template(v-if="!isLoggedIn")
-      router-link.nav-user__link.btn.btn--nav.btn--green(to='/login') Log in
-      router-link.nav-user__link.btn.btn--nav.btn--green(to='/signup') Sign up
+      router-link.nav-user__link.btn--link.btn--nav.btn--green(to='/login') Log in
+      router-link.nav-user__link.btn--link.btn--nav.btn--green(to='/signup') Sign up
     template(v-else)
-      router-link.btn.btn--nav.nav-user__link.nav-user__avatar-link(to=`/me`)
+      router-link.nav-user__link.nav-user__avatar-link.btn--link.btn--nav(to=`/me`)
         img.nav-user__avatar(src=`./../../assets/img/avatar-placeholder-720.webp` alt=`Photo of`)
         span Frost He
-      a.btn.btn--nav.btn--orange(@click="onLogoutClicked") Log out
+      a.btn--link.btn--nav.btn--orange(href="" @click="onLogoutClicked") Log out

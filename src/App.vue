@@ -10,8 +10,7 @@ export default {
 <template lang="pug">
 body#app
   Header
-  main.main
-    router-view
+  router-view
 </template>
 
 <style lang="scss" src="./assets/styles/main.scss"></style>
