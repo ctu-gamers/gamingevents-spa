@@ -1,5 +1,6 @@
 main.main
-  .form-container.login-form
+  BusyLoader(v-if="isLogging")
+  .form-container.login-form(v-else)
     h2.heading-secondary.margin-bottom-lg Log into your account
     form.form(v-on:submit.prevent="handleSubmit")
       .form__group

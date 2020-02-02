@@ -2,15 +2,26 @@
 
 import types from "./../../store/types";
 import routeNames from "./../../router/routeNames";
+import BusyLoader from "./../../components/BusyLoader/BusyLoader.vue";
 
 export default {
   name: "login",
+  components: {
+    BusyLoader
+  },
   data: function() {
     return {
       emailAddress: "",
       password: "",
       isLogging: false
     };
+  },
+  computed: {
+    loginBtnText: {
+      get: function() {
+        return this.isLogging === false ? "Login" : "Logging...";
+      }
+    }
   },
   methods: {
     handleSubmit: async function() {
