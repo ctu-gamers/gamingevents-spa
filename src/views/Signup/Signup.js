@@ -8,6 +8,6 @@ export default {
     };
   },
   methods: {
-    onSignupClicked: function() {}
+    handleSubmit: function() {}
   }
 };

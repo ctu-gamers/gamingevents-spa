@@ -1,6 +1,6 @@
 .user-view__form-container
   h2.heading-secondary.margin-bottom-lg Your account settings
-  form.form.form-user-data
+  form.form.form-user-data(v-on:submit.prevent="updateMe")
     .form__group.form__photo-upload
       img.form__user-photo(src='./../../assets/img/avatar-placeholder-720.webp', alt='User avatar')
       a.btn-text(href='#') Choose new avatar
@@ -8,4 +8,4 @@
       label.form__label(for='username') Username
       input#username.form__input(type='text', v-model='username', required)
     .form__group.right
-      button.btn--form.btn--small.btn--green(@click="updateMe") Save Changes
+      button.btn--form.btn--small.btn--green Save Changes

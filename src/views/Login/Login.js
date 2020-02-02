@@ -8,22 +8,26 @@ export default {
   data: function() {
     return {
       emailAddress: "",
-      password: ""
+      password: "",
+      isLogging: false
     };
   },
   methods: {
-    onLoginClicked: async function() {
-      console.log(this.emailAddress);
+    handleSubmit: async function() {
       try {
+        this.isLogging = true;
         await this.$store.dispatch(types.ACTION_AUTHENTICATE, {
           emailAddress: this.emailAddress,
           password: this.password
         });
         console.log(`User successfully logged in.`);
         this.$router.push({ name: routeNames.ROUTE_HOME });
+        this.$alert("success", "Login Successfully.");
       } catch (error) {
-        alert(error);
+        console.log(error);
+        this.$alert("error", error.response.data.message);
       }
+      this.isLogging = false;
     }
   }
 };

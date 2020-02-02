@@ -11,15 +11,14 @@ export default {
     this.username = this.$store.state.user.username;
   },
   methods: {
-    updateMe: async function(e) {
-      e.preventDefault();
+    updateMe: async function() {
       try {
         await this.$store.dispatch(types.ACTION_UPDATEME, {
           username: this.username
         });
-        alert("Update Successfully");
+        this.$alert("success", "Update Successfully.");
       } catch (error) {
-        alert(error);
+        this.$alert("error", error.response.data.message);
       }
     }
   }

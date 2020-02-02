@@ -1,7 +1,7 @@
 main.main
   .form-container.signup-form
     h2.heading-secondary.margin-bottom-lg Create your account
-    div.form
+    form.form(v-on:submit.prevent="handleSubmit")
       .form__group
         label.form__label(for='email') Email address
         input#email.form__input(type='email', placeholder='you@example.com', required v-model='emailAddress')
@@ -12,4 +12,4 @@ main.main
         label.form__label(for='password') Confirm Password
         input#password.form__input(type='password', placeholder='••••••••', required, minlength='8' v-model='passwordConfirm')
       .form__group
-        button.btn--form.btn--green(@click="onSignupClicked") Sign up
+        button.btn--form.btn--green Sign up
