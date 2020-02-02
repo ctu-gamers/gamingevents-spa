@@ -1,6 +1,5 @@
 main.main
-  BusyLoader(v-if="isLogging")
-  .form-container.login-form(v-else)
+  .form-container.login-form
     h2.heading-secondary.margin-bottom-lg Log into your account
     form.form(v-on:submit.prevent="handleSubmit")
       .form__group
@@ -10,4 +9,4 @@ main.main
         label.form__label(for='password') Password
         input#password.form__input(type='password', placeholder='••••••••', required, minlength='8' v-model='password')
       .form__group
-        button.btn--form.btn--green.btn--login(type="submit") Login
+        button.btn--form.btn--green.btn--login(type="submit" :disabled="isLogging") {{ loginBtnText }}
