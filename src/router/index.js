@@ -12,7 +12,7 @@ import Error from "./../components/Error/Error.vue";
 
 import Home from "../views/Home/Home.vue";
 import Login from "../views/Login/Login.vue";
-import Signup from "../views/Signup/Signup.vue";
+// import Signup from "../views/Signup/Signup.vue";
 import Me from "../views/Me/Me.vue";
 
 Vue.use(VueRouter);
@@ -39,11 +39,11 @@ const routes = [
     name: routeNames.ROUTE_LOGIN,
     component: Login
   },
-  {
-    path: "/signup",
-    name: routeNames.ROUTE_SIGNUP,
-    component: Signup
-  },
+  // {
+  //   path: "/signup",
+  //   name: routeNames.ROUTE_SIGNUP,
+  //   component: Signup
+  // },
   {
     path: "/me",
     name: routeNames.ROUTE_ME,
