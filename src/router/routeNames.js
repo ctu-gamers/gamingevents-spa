@@ -6,5 +6,7 @@ export default {
   ROUTE_ME: "me",
 
   ROUTE_PROFILE: "profile",
-  ROUTE_PASSWORD: "password"
+  ROUTE_PASSWORD: "password",
+
+  ROUTE_EVENTS: "events"
 };

@@ -61,6 +61,9 @@ export default new Vuex.Store({
       const resUser = await backend.updateMe(payload.username);
       const user = resUser.data.data;
       commit(types.MUTATION_SET_USER, user);
+    },
+    async [types.ACTION_CHANGE_PASSWORD](context, payload) {
+      await backend.updateMyPassword(payload.currentPassword, payload.password);
     }
   },
   modules: {},

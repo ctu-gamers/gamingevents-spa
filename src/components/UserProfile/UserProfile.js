@@ -8,7 +8,6 @@ export default {
     };
   },
   mounted: function() {
-    console.log(this.$store.state.user);
     this.username = this.$store.state.user.username;
   },
   methods: {

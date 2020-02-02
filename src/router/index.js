@@ -6,8 +6,10 @@ import routeNames from "./routeNames";
 
 import UserProfile from "./../components/UserProfile/UserProfile.vue";
 import Password from "./../components/Password/Password.vue";
+import GamingEvents from "./../components/GamingEvents/GamingEvents.vue";
 
 import Error from "./../components/Error/Error.vue";
+
 import Home from "../views/Home/Home.vue";
 import Login from "../views/Login/Login.vue";
 import Signup from "../views/Signup/Signup.vue";
@@ -50,14 +52,19 @@ const routes = [
     redirect: { name: routeNames.ROUTE_PROFILE },
     children: [
       {
-        path: "profile",
         name: routeNames.ROUTE_PROFILE,
+        path: "profile",
         component: UserProfile
       },
       {
-        name: "password",
-        path: routeNames.ROUTE_PASSWORD,
+        name: routeNames.ROUTE_PASSWORD,
+        path: "password",
         component: Password
+      },
+      {
+        name: routeNames.ROUTE_EVENTS,
+        path: "events",
+        component: GamingEvents
       }
     ]
   },

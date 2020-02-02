@@ -43,5 +43,11 @@ export default {
     });
     return res;
   },
-  updatePassword: async function() {}
+  updateMyPassword: async function(currentPassword, password) {
+    const res = await getClient(true).patch("api/v1/users/updateMyPassword", {
+      currentPassword: currentPassword,
+      password: password
+    });
+    return res;
+  }
 };

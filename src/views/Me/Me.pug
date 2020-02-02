@@ -8,10 +8,11 @@ main.main
       ul.side-nav
         +navItem('profile','Profile')
         +navItem('password','Change Password')
-      .admin-nav
-        h5.admin-nav__heading Admin
-        ul.side-nav
-          li.side-nav__item
-            router-link.side-nav__link.btn--link(:to="{ name: 'admin'}") Administration
+      template(v-if='isAdmin')
+        .admin-nav
+          h5.admin-nav__heading Admin
+          ul.side-nav
+            li.side-nav__item
+              router-link.side-nav__link.btn--link(:to="{ name: 'events'}") Gaming Events
     .user-view__content
       router-view
