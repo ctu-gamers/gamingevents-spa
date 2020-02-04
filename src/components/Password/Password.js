@@ -53,8 +53,9 @@ export default {
         this.$router.replace({ name: routeNames.ROUTE_LOGIN });
       } catch (error) {
         this.$alert("error", error.response.data.message);
+      } finally {
+        this.isSaving = false;
       }
-      this.isSaving = false;
     }
   }
 };

@@ -32,8 +32,9 @@ export default {
         this.$alert("success", "Login Successfully.");
       } catch (error) {
         this.$alert("error", error.response.data.message);
+      } finally {
+        this.isLogging = false;
       }
-      this.isLogging = false;
     }
   }
 };

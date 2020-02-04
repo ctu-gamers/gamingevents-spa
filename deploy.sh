@@ -4,7 +4,6 @@
 set -e
 
 # build
-rm -R dist
 npm run build
 
 # navigate into the build output directory

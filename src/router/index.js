@@ -88,11 +88,14 @@ const router = new VueRouter({
   routes
 });
 
-router.beforeEach((to, from, next) => {
+// try to get jwt from localstorage before entering any route
+router.beforeEach(async (to, from, next) => {
   const localJwt = localStorage.getItem("jwt");
   if (!store.state.userToken && localJwt) {
     store.commit(types.MUTATION_SET_USER_TOKEN, localJwt);
-    store.dispatch(types.ACTION_FETCH_USER);
+    // should be first wait for the data to be in place.
+    // TODO: extract the user data from jwt instead of calling the api every time.
+    await store.dispatch(types.ACTION_FETCH_USER);
   }
   next();
 });

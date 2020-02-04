@@ -37,10 +37,8 @@ export default {
     return res;
   },
 
-  updateMe: async function(username) {
-    const res = await getClient(true).patch("api/v1/users/updateMe", {
-      username: username
-    });
+  updateMe: async function(data) {
+    const res = await getClient(true).patch("api/v1/users/updateMe", data);
     return res;
   },
   updateMyPassword: async function(currentPassword, password) {

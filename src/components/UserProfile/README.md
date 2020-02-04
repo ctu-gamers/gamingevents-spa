@@ -1,0 +1,1 @@
+In this conponment, I need to have real-time user photo uploaded. I created an isolated method to react on `input[type="file"].change` event. Inside that handler, I manually created `FormData` and append the file value, this stands for `form-data/multipart` on requests, and this is always the data format for file uploading.

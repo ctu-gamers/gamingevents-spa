@@ -1,7 +1,7 @@
 header.header
   .header__logo-box
     img.header__logo(src='./../../assets/img/logo.png' alt='Logo')
-    router-link.header__link.btn--link.btn--nav.btn--green(to=`/`) Gamers' Events
+    router-link.header__link.btn--link.btn--nav.btn--green(to=`/`) Connect Gamers
   
   nav.nav-user
     template(v-if="!isLoggedIn")
@@ -9,6 +9,6 @@ header.header
       //-router-link.nav-user__link.btn--link.btn--nav.btn--green(to='/signup') Sign up
     template(v-else)
       router-link.nav-user__link.nav-user__avatar-link.btn--link.btn--nav(to=`/me`)
-        img.nav-user__avatar(src=`./../../assets/img/avatar-placeholder-720.webp` alt=`Photo of`)
-        span {{ username || 'Gamers' }}
+        img.nav-user__avatar(:src=`photo` alt=`Photo of`)
+        span {{ username || 'Gamer' }}
       a.btn--link.btn--nav.btn--orange(href="" @click="onLogoutClicked") Log out

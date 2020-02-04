@@ -1,0 +1,1 @@
+In this component, in order to collect errors for password update validations, I created a `validate` method as the handler on `form.input` event. Everytime the user input a character, I collect errors of the custom validation rules and render the errors in a list style.

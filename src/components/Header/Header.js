@@ -13,6 +13,11 @@ export default {
       get: function() {
         return this.$store.state.user.username;
       }
+    },
+    photo: {
+      get: function() {
+        return this.$store.state.user.photo;
+      }
     }
   },
   methods: {

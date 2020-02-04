@@ -1,3 +1,5 @@
+import url from "url";
+
 import Vue from "vue";
 import Vuex from "vuex";
 import types from "./types";
@@ -29,13 +31,20 @@ export default new Vuex.Store({
       state.user.id = payload._id;
       state.user.username = payload.username;
       state.user.emailAddress = payload.email;
-      state.user.photo = payload.photo;
+      state.user.photo = url.resolve(
+        process.env.VUE_APP_API_BASE_URL,
+        `img/users/${payload.photo}`
+      );
       state.user.role = payload.role;
+      console.log(state.user.photo);
     }
   },
   getters: {
     isAuthenticated: state => {
       return state.userToken !== undefined;
+    },
+    user: state => {
+      return { ...state.user };
     }
   },
   actions: {
@@ -58,7 +67,7 @@ export default new Vuex.Store({
       localStorage.removeItem("jwt");
     },
     async [types.ACTION_UPDATEME]({ commit }, payload) {
-      const resUser = await backend.updateMe(payload.username);
+      const resUser = await backend.updateMe(payload);
       const user = resUser.data.data;
       commit(types.MUTATION_SET_USER, user);
     },

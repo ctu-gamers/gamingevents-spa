@@ -4,12 +4,12 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
-  color: #fff;
+  color: var(--color-white);
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   padding: 1.6rem 15rem;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-1);
 }
 .alert--success {
   background-color: var(--color-primary);

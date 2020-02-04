@@ -1,0 +1,1 @@
+In this component, in order to implement a loading status of the page, I used `computed` property to calculate a button text based on `isLogging` property, and also applies the `disabled` attribute if `isLogging` is true.
