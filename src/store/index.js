@@ -15,13 +15,9 @@ export default new Vuex.Store({
       username: "",
       photo: "",
       role: ""
-    },
-    randomGif: ""
+    }
   },
   mutations: {
-    setRandomGif(state, payload) {
-      state.randomGif = payload;
-    },
     // we can use the ES2015 computed property name feature
     // to use a constant as the function name
     [types.MUTATION_SET_USER_TOKEN](state, payload) {

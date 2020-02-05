@@ -1,0 +1,56 @@
+.game {
+  display: inline-block;
+  background-color: var(--color-grey-light-2);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  max-width: 30rem;
+
+  &__figure {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &__photo {
+    width: 30rem;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    &-text {
+      text-align: left;
+      font-weight: 700;
+      font-size: 2rem;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.textuals {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.platforms {
+  text-align: right;
+}
+
+.properties {
+  &-list {
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    & > span {
+      display: inline-block;
+    }
+  }
+}
