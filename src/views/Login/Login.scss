@@ -2,10 +2,12 @@
   max-width: 65rem;
 }
 
-.btn--login:disabled {
-  background-color: var(--color-grey-dark-2);
-  color: var(--color-grey-dark-3);
-  border-color: var(--color-grey-dark-2);
+.btn--login {
+  &:disabled {
+    background-color: var(--color-grey-dark-2);
+    color: var(--color-grey-dark-3);
+    border-color: var(--color-grey-dark-2);
+  }
 }
 
 .loader {
