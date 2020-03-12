@@ -1,0 +1,71 @@
+<div class="user-view__form-container">
+  <h2 class="heading-secondary margin-bottom-lg">Your Game Card</h2>
+  <form class="form form-user-data" v-on:submit.prevent="updateMe">
+    <div class="form__group form__photo-upload">
+      <img
+        src="./../../assets/img/default-avatar.jpg"
+        alt="User avatar"
+        class="form__user-photo"
+      />
+      <!-- <input
+        type="file"
+        class="form__upload"
+        accept="image/*"
+        id="photo"
+        name="photo"
+        v-on:change="onPhotoChange"
+      />
+      <label for="photo"> Choose new avatar</label> -->
+    </div>
+    <div class="form__group">
+      <label for="username" class="form__label">Username</label>
+      <input
+        type="text"
+        id="username"
+        class="form__input"
+        v-model="username"
+        required
+      />
+    </div>
+    <div class="form__group">
+      <label for="uplay" class="form__label">Uplay</label>
+      <input type="text" id="uplay" class="form__input" v-model="uplay" />
+    </div>
+    <div class="form__group">
+      <label for="steam" class="form__label">Steam</label>
+      <input type="text" id="steam" class="form__input" v-model="steam" />
+    </div>
+    <div class="form__group">
+      <label for="psn" class="form__label">PSN</label>
+      <input type="text" id="psn" class="form__input" v-model="psn" />
+    </div>
+    <div class="form__group">
+      <label for="switchFC" class="form__label">Switch FC</label>
+      <input type="text" id="switchFC" class="form__input" v-model="switchFC" />
+    </div>
+    <div class="form__group">
+      <label for="xboxlive" class="form__label">XBox Live</label>
+      <input type="text" id="xboxlive" class="form__input" v-model="xboxlive" />
+    </div>
+    <div class="form__group">
+      <label for="epicGames" class="form__label">Epic Games</label>
+      <input
+        type="text"
+        id="epicGames"
+        class="form__input"
+        v-model="epicGames"
+      />
+    </div>
+    <div class="form__group">
+      <label for="gog" class="form__label">GOG</label>
+      <input type="text" id="gog" class="form__input" v-model="gog" />
+    </div>
+    <div class="form__group">
+      <label for="eaOrigin" class="form__label">EA Origin</label>
+      <input type="text" id="eaOrigin" class="form__input" v-model="eaOrigin" />
+    </div>
+    <div class="form__group right">
+      <button class="btn--form btn--small btn--green">Save Changes</button>
+    </div>
+  </form>
+</div>

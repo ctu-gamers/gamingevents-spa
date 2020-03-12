@@ -14,7 +14,15 @@ export default new Vuex.Store({
       _id: "",
       username: "",
       photo: "",
-      role: ""
+      role: "",
+      uplay: "",
+      steam: "",
+      psn: "",
+      switchFC: "",
+      xboxlive: "",
+      epicGames: "",
+      gog: "",
+      eaOrigin: ""
     }
   },
   mutations: {
@@ -32,6 +40,15 @@ export default new Vuex.Store({
         `img/users/${payload.photo}`
       );
       state.user.role = payload.role;
+      state.user.uplay = payload.uplay;
+      state.user.steam = payload.steam;
+      state.user.psn = payload.psn;
+      state.user.switchFC = payload.switchFC;
+      state.user.xboxlive = payload.xboxlive;
+      state.user.epicGames = payload.epicGames;
+      state.user.gog = payload.gog;
+      state.user.eaOrigin = payload.eaOrigin;
+
       console.log(state.user.photo);
     }
   },
