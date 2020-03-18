@@ -1,0 +1,20 @@
+<div class="game">
+  <img :src="game.thumbnail" alt="Game Thumbnail" class="game__photo" />
+  <div class="textuals">
+    <div class="game__meta">
+      <span>32 sessions</span>
+      <span>PC</span>
+    </div>
+    <div class="game__title">
+      <h3 class="game__title-text">{{ game.title }}</h3>
+    </div>
+    <div class="properties">
+      <ul class="properties-list">
+        <li class="properties__item">
+          <span class="properties__item-key">Release Date</span>
+          <span class="properties__item-value">{{ game.releaseDate }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

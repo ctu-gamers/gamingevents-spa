@@ -47,5 +47,9 @@ export default {
       password: password
     });
     return res;
+  },
+  getPopularGames: async function() {
+    const res = await getClient(true).get("api/v1/games/popular-games");
+    return res;
   }
 };
